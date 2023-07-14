@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 import Table from './TableLayout'
 import GridLayout from './GridLayout'
+import { TableCellsIcon,Squares2X2Icon } from '@heroicons/react/20/solid'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -13,15 +14,16 @@ export default function DataTabs({itemsPerPage}) {
  ]
 
   return (
-    <div className="w-full  px-2 py-16 sm:px-0">
-      <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+    <div className="w-full   sm:px-0">
+      <Tab.Group >
+        <div className='justify-end flex'>
+        <Tab.List className="inline-flex  space-x-1 justify-end rounded-t-xl bg-blue-900/20 p-2">
           {tabs.map((i) => (
             <Tab
               key={i}
               className={({ selected }) =>
                 classNames(
-                  'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
+                  ' rounded-lg p-2.5 text-sm font-medium leading-5 text-blue-700',
                   'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                   selected
                     ? 'bg-white shadow'
@@ -29,17 +31,20 @@ export default function DataTabs({itemsPerPage}) {
                 )
               }
             >
-              {i}
+  {i=="Table"&& <TableCellsIcon className='w-6 '/>}
+  {i=="GridLayout"&& <Squares2X2Icon className='w-6 '/>}
+            {/* {i=="GridLayout"&& <GridLayout itemsPerPage={itemsPerPage}/>} */}
             </Tab>
           ))}
         </Tab.List>
-        <Tab.Panels className="mt-2">
+        </div>
+        <Tab.Panels className="">
           {tabs.map((i, idx) => (
             <Tab.Panel
               key={idx}
               className={classNames(
-                'rounded-xl bg-white p-3',
-                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'
+                'rounded-tl-xl bg-white p-3',
+                'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2 overflow-x-auto '
               )}
             >
             {i=="Table"&& <Table itemsPerPage={itemsPerPage}/>}
@@ -47,6 +52,7 @@ export default function DataTabs({itemsPerPage}) {
             </Tab.Panel>
           ))}
         </Tab.Panels>
+      
       </Tab.Group>
     </div>
   )

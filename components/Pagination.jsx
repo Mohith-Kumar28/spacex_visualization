@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updatePagination } from '../reducers/appSlice';
+import { ArrowLongLeftIcon} from '@heroicons/react/20/solid'
 
 const Pagination = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const Pagination = () => {
     const pageNumbers = [];
 
     for (let i = 1; i <= totalPages; i++) {
+      if(i==1||i==2||i==totalPages)
       pageNumbers.push(
         <button
           key={i}
@@ -30,21 +32,21 @@ const Pagination = () => {
   };
 
   return (
-    <div className="flex justify-center mt-4">
+    <div className="flex justify-between">
       <button
         onClick={() => handlePageChange(pagination.currentPage - 1)}
         disabled={pagination.currentPage === 1}
-        className={`px-3 py-1 rounded-md mx-1 focus:outline-none ${pagination.currentPage === 1 ? 'bg-gray-200 text-gray-700 cursor-not-allowed' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+        className={`px-3  rounded-md mx-1 focus:outline-none ${pagination.currentPage === 1 ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'bg-gray-700 text-gray-200 hover:bg-gray-500'}`}
       >
-        Previous
+       <ArrowLongLeftIcon className='w-9'/>
       </button>
-      {renderPageNumbers()}
+      {/* {renderPageNumbers()} */}
       <button
         onClick={() => handlePageChange(pagination.currentPage + 1)}
         disabled={pagination.currentPage === pagination.totalPages}
-        className={`px-3 py-1 rounded-md mx-1 focus:outline-none ${pagination.currentPage === pagination.totalPages ? 'bg-gray-200 text-gray-700 cursor-not-allowed' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+        className={`px-3 rounded-md mx-1 focus:outline-none ${pagination.currentPage === pagination.totalPages ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'bg-gray-700 text-gray-200 hover:bg-gray-500'}`}
       >
-        Next
+    <ArrowLongLeftIcon className='w-9 rotate-180'/>
       </button>
     </div>
   );

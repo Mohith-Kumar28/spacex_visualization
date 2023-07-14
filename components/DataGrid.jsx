@@ -46,12 +46,13 @@ const DataGrid = () => {
   };
 
   return (
-    <div>
+    <div className='pb-10'>
       
     <DataTabs itemsPerPage={itemsPerPage}/>
 
-     
+     <div className='rounded-b-lg bg-gray-900 p-3'>
       <Pagination/>
+      </div>
     </div>
   );
 };

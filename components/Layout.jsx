@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       </Head>
       <div className="min-h-screen mx-auto px-4 bg-gray-300">
         <header className="py-4">
-          <h1 className="text-3xl font-bold">SpaceX Data</h1>
+          {/* <h1 className="text-3xl font-bold">SpaceX Data</h1> */}
         </header>
         <main>{children}</main>
       </div>

@@ -1,5 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import ModalDetails from './ModalDetails'
 
 export default function Modal({isOpen,setIsOpen,data}) {
 //   let [isOpen, setIsOpen] = useState(true)
@@ -50,26 +51,16 @@ export default function Modal({isOpen,setIsOpen,data}) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    Testttt
-                  </Dialog.Title>
-                  <div className="mt-2 text-gray-700">
-                  <div className="py-2 px-4 border">{data.capsule_serial}</div>
-              <div className="py-2 px-4 border">{data.status}</div>
-              <div className="py-2 px-4 border">{data.original_launch}</div>
-              <div className="py-2 px-4 border">{data.type}</div>
-                  </div>
+                  
+                <ModalDetails data={data}/>
 
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="absolute rounded-md top-3 right-3  border  bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
-                      Got it, thanks!
+                      Got it, Close!
                     </button>
                   </div>
                 </Dialog.Panel>

@@ -11,9 +11,9 @@ const GridLayout = ({itemsPerPage}) => {
          <Modal isOpen={isOpen} setIsOpen={setIsOpen} data={item}/>
  
 
-<div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+<div className="mx-auto  grid max-w-2xl grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-5  py-5   lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {(pagination.currentPage==1?(searchResults.slice(0,itemsPerPage)):(searchResults)).map((item) => (
-            <article onClick={()=>{setIsOpen(true),setItem(item)}} key={item.capsule_serial} className="flex max-w-xl flex-col items-start justify-between cursor-pointer">
+            <div onClick={()=>{setIsOpen(true),setItem(item)}} key={item.capsule_serial} className="flex max-w-xl flex-col items-start justify-between cursor-pointer bg-gray-100 rounded-lg p-4">
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={item.original_launch} className="text-gray-500">
                   {item.original_launch}
@@ -46,7 +46,7 @@ const GridLayout = ({itemsPerPage}) => {
                   <p className="text-gray-600">{item.capsule_serial}</p>
                 </div>
               </div>
-            </article>
+            </div>
           ))}
         </div>
   </>
