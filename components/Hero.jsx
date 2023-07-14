@@ -39,7 +39,7 @@ const Hero = () => {
           />
         </div>
     
-        <div className=" mx-auto max-w-2xl pb-10  ">
+        <div className=" mx-auto max-w-2xl pb-32 md:pb-10  ">
         <div className="justify-center mb-6  w-full  flex ">
         <img src="/assets/logo.png" className="bg-white/40 backdrop-blur-3xl w-40 rounded-lg px-3 py-2" alt="" />
       </div>
