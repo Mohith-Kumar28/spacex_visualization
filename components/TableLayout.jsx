@@ -27,7 +27,7 @@ const TableLayout = ({itemsPerPage}) => {
           {/* <td className="py-2 px-4 border">{item.rocket_id}</td> */}
           <td className="py-2 px-4 border">{item.capsule_serial}</td>
           <td className="py-2 px-4 border">{item.status}</td>
-          <td className="py-2 px-4 border">{item.original_launch}</td>
+          <td className="py-2 px-4 border">{new Date(item.original_launch).toUTCString()}</td>
           <td className="py-2 px-4 border">{item.type}</td>
         </tr>
          ))}

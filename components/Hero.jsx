@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import CustomCursor from "./CustomCursor";
 
 const Hero = () => {
     return (
-      <div className="relative  flex flex-col justify-end h-screen isolate bg-black">
+      <div className="relative  flex flex-col justify-end h-screen isolate bg-black cursor-none">
+        <CustomCursor/>
              {/* <Image
      placeholder="blur"
      blurDataURL="/assets/hero.png"
