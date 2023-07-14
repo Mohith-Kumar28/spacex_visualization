@@ -1,5 +1,5 @@
 **Live App URL:** [https://spacexplorer.fun/](https://spacexplorer.fun/) <br/>
-**Figma UI URL:** [Figma link](https://www.figma.com/file/PHGqmffuY8Ze4tJfhb6b6U/Untitled?type=design&node-id=0%3A1&mode=design&t=hl2zIYaljTMMluFi-1)
+**Figma UI URL:** [Figma link](https://www.figma.com/file/PHGqmffuY8Ze4tJfhb6b6U/Untitled?type=design&node-id=0%3A1&mode=design&t=hl2zIYaljTMMluFi-1) <br/>
 **GitHub Repository:** [https://github.com/your-username/spacexplorer](https://github.com/your-username/spacexplorer) <br/>
 **Frontend Framework:** Next.js <br/>
 **Styling:** Tailwind CSS <br/>
