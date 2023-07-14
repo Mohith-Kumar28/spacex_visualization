@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Head>
-        <title>SpaceX Data</title>
+        <title>SpaceXplorer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen mx-auto  bg-black">

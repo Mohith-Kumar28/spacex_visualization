@@ -43,7 +43,7 @@ export default function DataTabs({itemsPerPage}) {
             <Tab.Panel
               key={idx}
               className={classNames(
-                'rounded-tl-xl bg-white p-3',
+                'rounded-t-xl bg-white p-3',
                 'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2 overflow-x-auto '
               )}
             >

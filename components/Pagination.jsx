@@ -3,6 +3,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updatePagination } from '../reducers/appSlice';
 import { ArrowLongLeftIcon} from '@heroicons/react/20/solid'
+import { motion } from 'framer-motion'
 
 const Pagination = () => {
   const dispatch = useDispatch();
@@ -34,22 +35,29 @@ const Pagination = () => {
 
   return (
     <div data-testid="pagination-component" className="flex justify-between">
-      <button
+      <motion.button
+      initial={{  x:100 }}
+      whileInView={{ x:0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.9 }}
         onClick={() => handlePageChange(pagination.currentPage - 1)}
         disabled={pagination.currentPage === 1}
         className={`px-3  rounded-xl mx-1 focus:outline-none ${pagination.currentPage === 1 ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'border-purple-500 border-2 bg-gray-950 text-gray-200 hover:bg-gray-500'}`}
       >
        <ArrowLongLeftIcon className='w-9'/>
-      </button>
+      </motion.button>
       {/* {renderPageNumbers()} */}
-      <button
-      
+      <motion.button
+      initial={{  x:-100 }}
+      whileInView={{ x:0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.9 }}
         onClick={() => handlePageChange(pagination.currentPage + 1)}
         disabled={pagination.currentPage === pagination.totalPages}
         className={`px-3 rounded-xl mx-1 focus:outline-none ${pagination.currentPage === pagination.totalPages ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'border-purple-500 border-2 bg-gray-950 text-gray-200 hover:bg-gray-500'}`}
       >
     <ArrowLongLeftIcon className='w-9 rotate-180'/>
-      </button>
+      </motion.button>
     </div>
   );
 };

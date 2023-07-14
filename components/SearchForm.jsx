@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { updateSearchData, updatePagination } from '../reducers/appSlice';
 import {ArrowsUpDownIcon} from "@heroicons/react/20/solid"
+import { motion } from 'framer-motion'
 
 const SearchForm = () => {
   const dispatch = useDispatch();
@@ -81,9 +82,11 @@ const SearchForm = () => {
           />
         </div>
       </div>
-      <div className='px-6 absolute -bottom-5 w-full'>
+      <motion.div whileHover={{ scale: 1.1}}
+           whileTap={{ scale: 0.9 }}
+           transition={{ type: "spring", stiffness: 400, damping: 15 }} className='px-6 absolute -bottom-5 w-full'>
         <button type="submit" className="px-4  py-2 mt-4 w-full rounded-full text-white bg-purple-500 font-bold text-lg hover:bg-purple-600 focus:outline-none focus:bg-blue-600">Search SpaceX Capsules</button>
-        {/* <ArrowsUpDownIcon className='w-12 absolute text-gray-500 -bottom-16'/> */}</div>
+        {/* <ArrowsUpDownIcon className='w-12 absolute text-gray-500 -bottom-16'/> */}</motion.div>
     </form>
   );
 };

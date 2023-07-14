@@ -7,6 +7,7 @@ import DataGrid from '../components/DataGrid';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Image from 'next/image';
+import { motion } from 'framer-motion'
 
 const HomePage = () => {
   return (
@@ -31,17 +32,20 @@ const HomePage = () => {
       src="/assets/galaxy.png"
       objectFit="cover"
       layout="fill"
-className='relative opacity-60'
+className='relative opacity-100'
     />
 
 {/* <video autoPlay={true}  loop={true} className='h-full absolute z-0 top-0 '>
         <source src="/assets/galaxy.mp4" />
       </video> */}
 
-<div id='search' className='relative z-10 mb-10  mx-8 rounded-2xl bg-white/10 backdrop-blur-3xl'>
+<motion.div initial={{  y:100 }}
+     whileInView={{ y:0 }}
+     viewport={{ once: true }}
+     transition={{ duration: 1 }} id='search' className='relative z-10 mb-10   rounded-2xl bg-white/10 backdrop-blur-3xl max-w-5xl mx-auto'>
         <SearchForm />
         <DataGrid />
-        </div>
+        </motion.div>
         </div>
       </Layout>
     </Provider>

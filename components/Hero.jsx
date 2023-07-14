@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import CustomCursor from "./CustomCursor";
+import { motion } from 'framer-motion'
 
 const Hero = () => {
     return (
-      <div className="relative  flex flex-col justify-end h-screen isolate bg-black cursor-none">
+      <motion.div 
+      initial={{  opacity:0 }}
+      whileInView={{ opacity:1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 2.4 }} className="relative  flex flex-col justify-between h-screen isolate bg-black cursor-none">
         <CustomCursor/>
              {/* <Image
      placeholder="blur"
@@ -20,6 +25,9 @@ const Hero = () => {
     <div>
     <img src="/assets/hero.png" className="w-full absolute top-0 -z-20" alt="" />
     </div>
+    <div className="justify-center absolute top-5 w-full  flex ">
+        <img src="/assets/logo.png" className="bg-white/30 backdrop-blur-3xl w-40 rounded-lg px-3 py-2" alt="" />
+      </div>
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -32,10 +40,13 @@ const Hero = () => {
             }}
           />
         </div>
-      
+    
         <div className=" mx-auto max-w-2xl pb-10  ">
         
-          <div className="text-center">
+          <motion.div initial={{  y:100 }}
+     whileInView={{ y:0 }}
+     viewport={{ once: true }}
+     transition={{ duration: 1 }} className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Start exploring <br/>the unexplored 
             </h1>
@@ -55,8 +66,8 @@ const Hero = () => {
             </div>
             </Link>
             
-            </div>
           </div>
+            </motion.div>
         </div>
         {/* <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -70,7 +81,7 @@ const Hero = () => {
             }}
           />
         </div> */}
-      </div>
+      </motion.div>
     );
   };
   

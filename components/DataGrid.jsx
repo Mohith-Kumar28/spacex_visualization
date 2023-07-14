@@ -5,6 +5,7 @@ import { updatePagination, updateSearchResults } from '../reducers/appSlice';
 import Pagination from './Pagination';
 import Modal from './Modal';
 import Table from './TableLayout';
+import { motion } from 'framer-motion'
 import DataTabs from './DataTabs';
 
 const DataGrid = () => {
@@ -12,7 +13,7 @@ const DataGrid = () => {
   const pagination = useSelector((state) => state.app.pagination);
   const searchResults = useSelector((state) => state.app.searchResults);
   const dispatch = useDispatch();
-  const itemsPerPage = 6; // Number of items to display per page
+  const itemsPerPage = 4; // Number of items to display per page
 
 
   useEffect(() => {
@@ -46,14 +47,17 @@ const DataGrid = () => {
   };
 
   return (
-    <div data-testid="data-grid-component" className='mt-0'>
+    <motion.div initial={{  y:100 }}
+    whileInView={{ y:0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }} data-testid="data-grid-component" className='mt-0'>
       
     <DataTabs itemsPerPage={itemsPerPage}/>
 
      <div className='rounded-b-lg  p-3'>
       <Pagination />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
