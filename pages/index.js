@@ -42,7 +42,7 @@ className='relative opacity-100'
 <motion.div initial={{  y:100 }}
      whileInView={{ y:0 }}
      viewport={{ once: true }}
-     transition={{ duration: 1 }} id='search' className='relative z-10 mb-10   rounded-2xl bg-white/10 backdrop-blur-3xl max-w-5xl mx-auto'>
+     transition={{ duration: 1 }} id='search' className='relative z-10 mb-10   rounded-2xl bg-white/10 backdrop-blur-xl max-w-5xl mx-auto'>
         <SearchForm />
         <DataGrid />
         </motion.div>
