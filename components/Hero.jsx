@@ -39,9 +39,9 @@ const Hero = () => {
           />
         </div>
     
-        <div className=" mx-auto max-w-2xl pb-32 md:pb-10  ">
+        <div className=" mx-auto max-w-2xl pb-56 md:pb-10  ">
         <div className="justify-center mb-6  w-full  flex ">
-        <img src="/assets/logo.png" className="bg-white/40 backdrop-blur-3xl w-40 rounded-lg px-3 py-2" alt="" />
+        <img src="/assets/logo.png" className="bg-white/70 backdrop-blur-3xl w-40 rounded-lg px-3 py-2" alt="" />
       </div>
           <motion.div initial={{  y:100 }}
      whileInView={{ y:0 }}
