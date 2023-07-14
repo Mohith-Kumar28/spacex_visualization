@@ -1,38 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**Live App URL:** [https://spacexplorer.fun/](https://spacexplorer.fun/) <br/>
+**Figma UI URL:** [Figma link](https://www.figma.com/file/PHGqmffuY8Ze4tJfhb6b6U/Untitled?type=design&node-id=0%3A1&mode=design&t=hl2zIYaljTMMluFi-1)
+**GitHub Repository:** [https://github.com/your-username/spacexplorer](https://github.com/your-username/spacexplorer) <br/>
+**Frontend Framework:** Next.js <br/>
+**Styling:** Tailwind CSS <br/>
+**Animation:** Framer Motion <br/>
+**Demo JEST test's:** npm run test <br/>
 
-## Getting Started
 
-First, run the development server:
+This GitHub repository hosts the code for the **SpaceXplorer** project, a web application that allows users to explore information about SpaceX missions and capsules. The live app can be accessed at [https://spacexplorer.fun/](https://spacexplorer.fun/).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The project is built using the **Next.js** framework, which provides a powerful and efficient way to create server-rendered React applications. It offers features like automatic code splitting, server-side rendering, and easy API integration.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For styling, the project utilizes **Tailwind CSS**, a highly customizable CSS framework that provides a comprehensive set of utility classes for rapid UI development. Tailwind CSS enables responsive and visually appealing designs while maintaining a clean and maintainable codebase.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+To enhance the user experience, animations are implemented using **Framer Motion**. Framer Motion is a popular animation library for React that allows smooth and interactive animations, adding visual flair to the application.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The project's GitHub repository contains the complete source code, including components, Redux store configuration, API integration, and styling. It follows best practices for project structure and code organization. The repository is actively maintained, and contributions are welcome.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to explore the repository, contribute to the project, and join the space exploration journey with **SpaceXplorer**!
