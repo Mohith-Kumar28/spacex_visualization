@@ -25,9 +25,7 @@ const Hero = () => {
     <div>
     <img src="/assets/hero.png" className="w-full absolute top-0 -z-20" alt="" />
     </div>
-    <div className="justify-center absolute top-5 w-full  flex ">
-        <img src="/assets/logo.png" className="bg-white/30 backdrop-blur-3xl w-40 rounded-lg px-3 py-2" alt="" />
-      </div>
+    
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -42,7 +40,9 @@ const Hero = () => {
         </div>
     
         <div className=" mx-auto max-w-2xl pb-10  ">
-        
+        <div className="justify-center mb-6  w-full  flex ">
+        <img src="/assets/logo.png" className="bg-white/40 backdrop-blur-3xl w-40 rounded-lg px-3 py-2" alt="" />
+      </div>
           <motion.div initial={{  y:100 }}
      whileInView={{ y:0 }}
      viewport={{ once: true }}
