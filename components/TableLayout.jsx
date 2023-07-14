@@ -16,6 +16,7 @@ const TableLayout = ({itemsPerPage}) => {
         <th className="py-2 px-4 text-left">Serial</th>
         <th className="py-2 px-4 text-left">Status</th>
         <th className="py-2 px-4 text-left">Original Launch</th>
+        <th className="py-2 px-4 text-left">Original Launch Unix</th>
         <th className="py-2 px-4 text-left">Type</th>
       </tr>
     </thead>
@@ -27,7 +28,8 @@ const TableLayout = ({itemsPerPage}) => {
           {/* <td className="py-2 px-4 border">{item.rocket_id}</td> */}
           <td className="py-2 px-4 border">{item.capsule_serial}</td>
           <td className="py-2 px-4 border">{item.status}</td>
-          <td className="py-2 px-4 border">{new Date(item.original_launch).toUTCString()}</td>
+          <td className="py-2 px-4 border">{new Date(item.original_launch).toString()}</td>
+          <td className="py-2 px-4 border">{item.original_launch_unix}</td>
           <td className="py-2 px-4 border">{item.type}</td>
         </tr>
          ))}

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updatePagination } from '../reducers/appSlice';
@@ -32,7 +33,7 @@ const Pagination = () => {
   };
 
   return (
-    <div className="flex justify-between">
+    <div data-testid="pagination-component" className="flex justify-between">
       <button
         onClick={() => handlePageChange(pagination.currentPage - 1)}
         disabled={pagination.currentPage === 1}
@@ -42,6 +43,7 @@ const Pagination = () => {
       </button>
       {/* {renderPageNumbers()} */}
       <button
+      
         onClick={() => handlePageChange(pagination.currentPage + 1)}
         disabled={pagination.currentPage === pagination.totalPages}
         className={`px-3 rounded-xl mx-1 focus:outline-none ${pagination.currentPage === pagination.totalPages ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'border-purple-500 border-2 bg-gray-950 text-gray-200 hover:bg-gray-500'}`}

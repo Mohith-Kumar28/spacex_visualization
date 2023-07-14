@@ -16,14 +16,14 @@ export default function DataTabs({itemsPerPage}) {
   return (
     <div className="w-full   sm:px-0">
       <Tab.Group >
-        <div className='justify-end flex'>
-        <Tab.List className="inline-flex  space-x-1 justify-end rounded-t-xl bg-blue-900/20 p-2">
+        <div className='justify-center flex'>
+        <Tab.List className="inline-flex  space-x-1 justify-end rounded-t-xl bg-purple-900/20 p-4">
           {tabs.map((i) => (
             <Tab
               key={i}
               className={({ selected }) =>
                 classNames(
-                  ' rounded-lg p-2.5 text-sm font-medium leading-5 text-blue-700',
+                  ' rounded-lg p-4 text-sm font-medium leading-5 text-purple-700',
                   'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                   selected
                     ? 'bg-white shadow'

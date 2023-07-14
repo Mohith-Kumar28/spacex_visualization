@@ -17,7 +17,7 @@ const CustomCursor = () => {
 
   return (
     <div
-      className="fixed z-50 pointer-events-none"
+      className="fixed z-50 rotate-12 pointer-events-none"
       style={{
         top: cursorPosition.y,
         left: cursorPosition.x,
@@ -27,7 +27,7 @@ const CustomCursor = () => {
         // backgroundColor: 'red',
       }}
     >
-        <img src="/assets/pointer.png" alt="" />
+        <img src="/assets/pointer.png" className='w-10' alt="" />
     </div>
   );
 };
