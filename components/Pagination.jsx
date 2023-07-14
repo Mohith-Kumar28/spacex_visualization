@@ -36,7 +36,7 @@ const Pagination = () => {
       <button
         onClick={() => handlePageChange(pagination.currentPage - 1)}
         disabled={pagination.currentPage === 1}
-        className={`px-3  rounded-md mx-1 focus:outline-none ${pagination.currentPage === 1 ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'bg-gray-700 text-gray-200 hover:bg-gray-500'}`}
+        className={`px-3  rounded-xl mx-1 focus:outline-none ${pagination.currentPage === 1 ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'border-purple-500 border-2 bg-gray-950 text-gray-200 hover:bg-gray-500'}`}
       >
        <ArrowLongLeftIcon className='w-9'/>
       </button>
@@ -44,7 +44,7 @@ const Pagination = () => {
       <button
         onClick={() => handlePageChange(pagination.currentPage + 1)}
         disabled={pagination.currentPage === pagination.totalPages}
-        className={`px-3 rounded-md mx-1 focus:outline-none ${pagination.currentPage === pagination.totalPages ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'bg-gray-700 text-gray-200 hover:bg-gray-500'}`}
+        className={`px-3 rounded-xl mx-1 focus:outline-none ${pagination.currentPage === pagination.totalPages ? 'bg-gray-800 text-gray-600 cursor-not-allowed' : 'border-purple-500 border-2 bg-gray-950 text-gray-200 hover:bg-gray-500'}`}
       >
     <ArrowLongLeftIcon className='w-9 rotate-180'/>
       </button>

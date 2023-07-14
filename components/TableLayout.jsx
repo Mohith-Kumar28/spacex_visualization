@@ -22,7 +22,7 @@ const TableLayout = ({itemsPerPage}) => {
     <tbody>
         {/* {console.log(searchResults.slice(0,4))} */}
       {(pagination.currentPage==1?(searchResults.slice(0,itemsPerPage)):(searchResults)).map((item) => (
-          <tr className='cursor-pointer' onClick={()=>{setIsOpen(true),setItem(item)}} key={item.capsule_serial}>
+          <tr className='cursor-pointer hover:bg-gray-100' onClick={()=>{setIsOpen(true),setItem(item)}} key={item.capsule_serial}>
          
           {/* <td className="py-2 px-4 border">{item.rocket_id}</td> */}
           <td className="py-2 px-4 border">{item.capsule_serial}</td>

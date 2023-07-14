@@ -8,10 +8,8 @@ const Layout = ({ children }) => {
         <title>SpaceX Data</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="min-h-screen mx-auto px-4 bg-gray-300">
-        <header className="py-4">
-          {/* <h1 className="text-3xl font-bold">SpaceX Data</h1> */}
-        </header>
+      <div className="min-h-screen mx-auto  bg-black">
+      
         <main>{children}</main>
       </div>
     </div>
