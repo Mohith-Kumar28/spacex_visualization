@@ -39,13 +39,13 @@ className='relative opacity-100'
         <source src="/assets/galaxy.mp4" />
       </video> */}
 
-<motion.div initial={{  y:100 }}
+<motion.section initial={{  y:100 }}
      whileInView={{ y:0 }}
      viewport={{ once: true }}
      transition={{ duration: 1 }} id='search' className='relative z-10 mb-10   rounded-2xl bg-white/10 backdrop-blur-xl max-w-5xl mx-auto'>
         <SearchForm />
         <DataGrid />
-        </motion.div>
+        </motion.section>
         </div>
       </Layout>
     </Provider>

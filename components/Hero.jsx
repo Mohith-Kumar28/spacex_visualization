@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Hero = () => {
     return (
-      <motion.div 
+      <motion.header 
       initial={{  opacity:0 }}
       whileInView={{ opacity:1 }}
       viewport={{ once: true }}
@@ -81,7 +81,7 @@ const Hero = () => {
             }}
           />
         </div> */}
-      </motion.div>
+      </motion.header>
     );
   };
   
