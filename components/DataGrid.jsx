@@ -31,7 +31,7 @@ const DataGrid = () => {
 
          // Calculate total pages
          const totalCount = parseInt(response.headers['spacex-api-count']);
-         const totalPages = Math.ceil(totalCount / itemsPerPage);
+         const totalPages = Math.ceil(totalCount / itemsPerPage)-1;
          dispatch(updatePagination({ ...pagination, totalPages }));
       } catch (error) {
         console.error(error);
