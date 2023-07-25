@@ -13,7 +13,7 @@ const DataGrid = () => {
   const pagination = useSelector((state) => state.app.pagination);
   const searchResults = useSelector((state) => state.app.searchResults);
   const dispatch = useDispatch();
-  const itemsPerPage = 4; // Number of items to display per page
+  const itemsPerPage = 6; // Number of items to display per page
 
 
   useEffect(() => {
